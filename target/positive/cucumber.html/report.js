@@ -33,16 +33,41 @@ formatter.step({
 });
 formatter.step({
   "line": 33,
-  "name": "I fill the details of the Adult Passenger",
+  "name": "I fill the details in Checkout Page",
   "keyword": "When "
 });
 formatter.step({
   "line": 34,
-  "name": "I fill the details of the Infant Passenger",
-  "keyword": "When "
+  "name": "should navigate to the Confirmation Page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "Booking ID Should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "Product Name should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "Date should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "Guest count should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 39,
+  "name": "Location should be displayed",
+  "keyword": "And "
 });
 formatter.examples({
-  "line": 36,
+  "line": 41,
   "name": "",
   "description": "",
   "id": "do-the-generic-search-and-complete-the-booking.;validate-generic-flow-for-1-adult-and-1-infantsdsd;",
@@ -59,7 +84,7 @@ formatter.examples({
         "currency",
         "bookingProductType"
       ],
-      "line": 37,
+      "line": 42,
       "id": "do-the-generic-search-and-complete-the-booking.;validate-generic-flow-for-1-adult-and-1-infantsdsd;;1"
     },
     {
@@ -71,21 +96,21 @@ formatter.examples({
         "1-0-0-0",
         "",
         "",
-        "USD",
+        "GBP",
         "experiences"
       ],
-      "line": 38,
+      "line": 43,
       "id": "do-the-generic-search-and-complete-the-booking.;validate-generic-flow-for-1-adult-and-1-infantsdsd;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 3426091400,
+  "duration": 4064265400,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 38,
+  "line": 43,
   "name": "Validate Generic Flow for 1 Adult and 1 Infantsdsd",
   "description": "",
   "id": "do-the-generic-search-and-complete-the-booking.;validate-generic-flow-for-1-adult-and-1-infantsdsd;;2",
@@ -100,7 +125,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 32,
-  "name": "user set the booking parameter checkIn date as \"60\" Supplier Code as \"VT5461P40\" City as \"LON\" ChoiceKey as \"GEN~0~DEFAULT~10:00~EVT-75~VT5461P40~5461P40\" pax as \"1-0-0-0\" ChildDoB as \"\" seniorDob as \"\" currency as \"USD\" bookingProductType as \"experiences\"",
+  "name": "user set the booking parameter checkIn date as \"60\" Supplier Code as \"VT5461P40\" City as \"LON\" ChoiceKey as \"GEN~0~DEFAULT~10:00~EVT-75~VT5461P40~5461P40\" pax as \"1-0-0-0\" ChildDoB as \"\" seniorDob as \"\" currency as \"GBP\" bookingProductType as \"experiences\"",
   "matchedColumns": [
     0,
     1,
@@ -116,13 +141,38 @@ formatter.step({
 });
 formatter.step({
   "line": 33,
-  "name": "I fill the details of the Adult Passenger",
+  "name": "I fill the details in Checkout Page",
   "keyword": "When "
 });
 formatter.step({
   "line": 34,
-  "name": "I fill the details of the Infant Passenger",
-  "keyword": "When "
+  "name": "should navigate to the Confirmation Page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "Booking ID Should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "Product Name should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "Date should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "Guest count should be displayed",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 39,
+  "name": "Location should be displayed",
+  "keyword": "And "
 });
 formatter.match({
   "arguments": [
@@ -155,7 +205,7 @@ formatter.match({
       "offset": 201
     },
     {
-      "val": "USD",
+      "val": "GBP",
       "offset": 216
     },
     {
@@ -163,28 +213,63 @@ formatter.match({
       "offset": 244
     }
   ],
-  "location": "GenericFlowSteps.userSetTheBookingParameterCheckInDateAsSupplierCodeAsCityAsChoiceKeyAsPaxAsChildDoBAsSeniorDobAsCurrencyAsBookingProductTypeAs(String,String,String,String,String,String,String,String,String)"
+  "location": "GenericFlowSteps.userSetTheBookingParameterCheckInDateAsSupplierCodeAsCityAsChoiceKeyAsPaxAsChildDoBAsSeniorDobAsCurrencyAsBookingProductTypeAs(int,String,String,String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 15524089900,
+  "duration": 77804357800,
   "status": "passed"
 });
 formatter.match({
-  "location": "GenericFlowSteps.i_fill_the_details_of_the_adult_passenger()"
+  "location": "GenericFlowSteps.iFillTheDetailsInCheckoutPage()"
 });
 formatter.result({
-  "duration": 50808122000,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#fName\"}\n  (Session info: chrome\u003d90.0.4430.212)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-UDDFKV4\u0027, ip: \u002710.177.176.6\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_241\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\\Users\\LASANR~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:57819}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 9d13ed3a41dfec75a2a5be4bcbb01a42\n*** Element info: {Using\u003did, value\u003dfName}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.sendKeys(Unknown Source)\r\n\tat PageActions.PassenegrPageActions.adultDetails(PassenegrPageActions.java:19)\r\n\tat Steps.GenericFlowSteps.i_fill_the_details_of_the_adult_passenger(GenericFlowSteps.java:32)\r\n\tat ✽.When I fill the details of the Adult Passenger(GenericBooking.feature:33)\r\n",
-  "status": "failed"
+  "duration": 53102830900,
+  "status": "passed"
 });
 formatter.match({
-  "location": "GenericFlowSteps.i_fill_the_details_of_the_infant_passenger()"
+  "location": "GenericFlowSteps.shouldNavigateToTheConfirmationPage()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 47758996800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "GenericFlowSteps.bookingIDShouldBeDisplayed()"
+});
+formatter.result({
+  "duration": 24534700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "GenericFlowSteps.productNameShouldBeDisplayed()"
+});
+formatter.result({
+  "duration": 45070100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "GenericFlowSteps.dateShouldBeDisplayed()"
+});
+formatter.result({
+  "duration": 45543500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "GenericFlowSteps.guestCountShouldBeDisplayed()"
+});
+formatter.result({
+  "duration": 48522600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "GenericFlowSteps.locationShouldBeDisplayed()"
+});
+formatter.result({
+  "duration": 20028672300,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 739609200,
+  "duration": 1077498700,
   "status": "passed"
 });
 });

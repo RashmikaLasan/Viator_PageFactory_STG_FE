@@ -1,16 +1,11 @@
 package Steps;
 
-import PageActions.PassenegrPageActions;
-import PageActions.PaymentPageActions;
-import PageActions.ReviewPageActions;
+import PageActions.*;
 import Utilities.SeleniumDriver;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
-import java.time.LocalDate;
 
 public class GenericFlowSteps {
 
@@ -18,6 +13,10 @@ public class GenericFlowSteps {
     PaymentPageActions paymentPageActions = new PaymentPageActions();
     ReviewPageActions reviewPageActions = new ReviewPageActions();
     String STGBase = "https://staging.theculturetrip.com/checkout/?";
+    public String StartDate;
+    CheckOutActions checkoutactions = new CheckOutActions();
+    ConfirmPageActions confirmPageActions = new ConfirmPageActions();
+
 
     @Given("^I am on the Passenger Page \"([^\"]*)\"$")
     public void i_am_on_the_passenger_page_something(String url) throws Throwable {
@@ -117,13 +116,58 @@ public class GenericFlowSteps {
     }
 
     @Given("^user set the booking parameter checkIn date as \"([^\"]*)\" Supplier Code as \"([^\"]*)\" City as \"([^\"]*)\" ChoiceKey as \"([^\"]*)\" pax as \"([^\"]*)\" ChildDoB as \"([^\"]*)\" seniorDob as \"([^\"]*)\" currency as \"([^\"]*)\" bookingProductType as \"([^\"]*)\"$")
-    public void userSetTheBookingParameterCheckInDateAsSupplierCodeAsCityAsChoiceKeyAsPaxAsChildDoBAsSeniorDobAsCurrencyAsBookingProductTypeAs(String FutureDateCount, String supplierCode, String City, String ChoiceKey, String Pax, String childDob, String seniorDob, String currency, String bookingProductType) throws Throwable {
-                                                                                                                                  //"<FutureDateCount>" Supplier Code as "<supplierCode>" City as "<City>" ChoiceKey as "<ChoiceKey>" pax as "<Pax>" ChildDoB as "<childDob>" seniorDob as "<seniorDob>" currency as "<currency>" bookingProductType as "<bookingProductType>"
+    public void userSetTheBookingParameterCheckInDateAsSupplierCodeAsCityAsChoiceKeyAsPaxAsChildDoBAsSeniorDobAsCurrencyAsBookingProductTypeAs(int FutureDateCount, String supplierCode, String City, String ChoiceKey, String Pax, String childDob, String seniorDob, String currency, String bookingProductType) throws Throwable {
 
-       String StartDate=  TimeDate.timeer(60);
+        StartDate = TimeDate.timeer(FutureDateCount);
        String stgCheckOut = "startDate="+StartDate+"&supplierCode="+supplierCode+"&city="+City+"&fc="+ChoiceKey+"&pax="+Pax+"&childDob="+childDob+"&seniorDob="+seniorDob+"&currency="+currency+"&bookingProductType="+bookingProductType;
 
         SeleniumDriver.openPage(STGBase+stgCheckOut);
         Thread.sleep(5000);
+    }
+
+    @When("^I fill the details in Checkout Page$")
+    public void iFillTheDetailsInCheckoutPage() throws Throwable {
+
+        checkoutactions.PassengerDetails();
+        checkoutactions.PayementSection();
+        Thread.sleep(5000);
+
+    }
+
+    @And("^should navigate to the Confirmation Page$")
+    public void shouldNavigateToTheConfirmationPage() throws Throwable {
+        confirmPageActions.BookingIdVisible();
+
+    }
+
+    @And("^Booking ID Should be displayed$")
+    public void bookingIDShouldBeDisplayed() throws Throwable {
+
+        confirmPageActions.BookingID();
+    }
+
+    @And("^Product Name should be displayed$")
+    public void productNameShouldBeDisplayed() throws Throwable {
+
+        confirmPageActions.ProductName();
+    }
+
+    @And("^Date should be displayed$")
+    public void dateShouldBeDisplayed() throws Throwable {
+        confirmPageActions.Date();
+
+    }
+
+    @And("^Guest count should be displayed$")
+    public void guestCountShouldBeDisplayed() throws Throwable {
+        confirmPageActions.Guest();
+
+    }
+
+    @And("^Location should be displayed$")
+    public void locationShouldBeDisplayed() throws Throwable {
+
+        confirmPageActions.Location();
+
     }
 }

@@ -30,11 +30,16 @@ Feature: Do the generic search and complete the booking.
   Scenario Outline: Validate Generic Flow for 1 Adult and 1 Infantsdsd
 
     Given user set the booking parameter checkIn date as "<FutureDateCount>" Supplier Code as "<supplierCode>" City as "<City>" ChoiceKey as "<ChoiceKey>" pax as "<Pax>" ChildDoB as "<childDob>" seniorDob as "<seniorDob>" currency as "<currency>" bookingProductType as "<bookingProductType>"
-    When I fill the details of the Adult Passenger
-    When I fill the details of the Infant Passenger
+    When I fill the details in Checkout Page
+    And should navigate to the Confirmation Page
+    And Booking ID Should be displayed
+    And Product Name should be displayed
+    And Date should be displayed
+    And Guest count should be displayed
+    And Location should be displayed
 
     Examples:
       | FutureDateCount | supplierCode | City | ChoiceKey                                 | Pax                    | childDob | seniorDob | currency | bookingProductType |
-      | 60              | VT5461P40    | LON  |GEN~0~DEFAULT~10:00~EVT-75~VT5461P40~5461P40|1-0-0-0 |            |           | USD      | experiences        |
+      | 60              | VT5461P40    | LON  |GEN~0~DEFAULT~10:00~EVT-75~VT5461P40~5461P40|1-0-0-0 |            |           | GBP      | experiences        |
 
 
