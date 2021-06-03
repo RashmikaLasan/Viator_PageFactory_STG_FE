@@ -22,13 +22,17 @@ Feature: Do the generic search and complete the booking.
     And Price of the Booking
 
 
-#    #############-----------------------------------------
+##############-----------------------------------------########################################################
 
   @mad
-  Scenario Outline: Validate Generic Flow for 1 Adult and 1 Infantsdsd
+  Scenario Outline: Validate Generic Flow for 1 Adult and 1 Infant V2
 
     Given user set the booking parameter checkIn date as "<FutureDateCount>" Supplier Code as "<supplierCode>" City as "<City>" ChoiceKey as "<ChoiceKey>" pax as "<Pax>" ChildDoB as "<childDob>" seniorDob as "<seniorDob>" currency as "<currency>" bookingProductType as "<bookingProductType>"
     When I fill the details in Checkout Page
+    Then Store the Product Name
+    Then Store the Date
+    Then Store the Guests
+    Then Store the Location
     And should navigate to the Confirmation Page
     And Booking ID Should be displayed
     And Product Name should be displayed

@@ -1,7 +1,0 @@
-PageActions\PassenegrPageActions.class
-PageActions\PaymentPageActions.class
-PageLocations\PassengerPageLocators.class
-Utilities\SeleniumDriver.class
-PageLocations\PaymentPageLocators.class
-PageLocations\ReviewPageLocators.class
-PageActions\ReviewPageActions.class

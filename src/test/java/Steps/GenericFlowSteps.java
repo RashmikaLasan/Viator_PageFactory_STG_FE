@@ -2,6 +2,7 @@ package Steps;
 
 import PageActions.*;
 import Utilities.SeleniumDriver;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -122,6 +123,7 @@ public class GenericFlowSteps {
        String stgCheckOut = "startDate="+StartDate+"&supplierCode="+supplierCode+"&city="+City+"&fc="+ChoiceKey+"&pax="+Pax+"&childDob="+childDob+"&seniorDob="+seniorDob+"&currency="+currency+"&bookingProductType="+bookingProductType;
 
         SeleniumDriver.openPage(STGBase+stgCheckOut);
+        System.out.println(STGBase + stgCheckOut);
         Thread.sleep(5000);
     }
 
@@ -129,6 +131,7 @@ public class GenericFlowSteps {
     public void iFillTheDetailsInCheckoutPage() throws Throwable {
 
         checkoutactions.PassengerDetails();
+        checkoutactions.PassengerEmail();
         checkoutactions.PayementSection();
         Thread.sleep(5000);
 
@@ -169,5 +172,29 @@ public class GenericFlowSteps {
 
         confirmPageActions.Location();
 
+    }
+
+    @Then("^Store the Product Name$")
+    public void storeTheProductName() throws Throwable {
+
+
+    }
+
+    @Then("^Store the Date$")
+    public void storeTheDate() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^Store the Guests$")
+    public void storeTheGuests() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^Store the Location$")
+    public void storeTheLocation() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 }

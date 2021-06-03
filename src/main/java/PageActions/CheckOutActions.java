@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class CheckOutActions {
 
     CheckOutLocators CheckOutPageLocators;
+    public String ConfirmDate1;
+
 
     public CheckOutActions() {
         this.CheckOutPageLocators = new CheckOutLocators();
@@ -24,7 +26,13 @@ public class CheckOutActions {
 
         CheckOutPageLocators.FName1.sendKeys("Lasan");
         CheckOutPageLocators.LName1.sendKeys("Rashmika");
+        Thread.sleep(2000);
+    }
 
+    public void PassengerEmail() throws InterruptedException {
+
+
+        CheckOutPageLocators.Email1.click();
         CheckOutPageLocators.Email1.sendKeys("lasanrash@gmail.com");
 
         JavascriptExecutor jsx = (JavascriptExecutor) SeleniumDriver.getDriver();
@@ -74,6 +82,16 @@ public class CheckOutActions {
 
     }
 
+    public void StoreValues() throws InterruptedException {
+
+        String ProdName = CheckOutPageLocators.ProductName.getText();
+        System.out.println(ProdName);
+
+        String DateAll1 = CheckOutPageLocators.Date1.getText();
+        ConfirmDate1 = DateAll1.split(":")[1];
+        System.out.println("ConfirmDate is: " + ConfirmDate1);
+
+    }
 
 }
 

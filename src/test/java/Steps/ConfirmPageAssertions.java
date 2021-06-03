@@ -1,10 +1,11 @@
 package Steps;
 
-import PageLocations.ConfirmPageLocators;
-
 public class ConfirmPageAssertions {
 
-    ConfirmPageLocators confirmPageLocators;
+    public void Assert() {
+
+
+    }
 
 
 }

@@ -17,7 +17,7 @@ public class SeleniumDriver{
 
 
     private SeleniumDriver(){
-        System.setProperty("webdriver.chrome.driver", "E:\\Software\\Selenium\\ChromeDriver89\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "E:\\Software\\Selenium\\ChromeDriver90\\chromedriver.exe");
         driver = new ChromeDriver();
         log.info("New driver instantiated");
         driver.manage().window().maximize();

@@ -63,6 +63,7 @@ public class ConfirmPageActions {
         if (confirmPageLocators.BookingID != null) {
 
             System.out.println("Navigated to the Confirmation Page");
+            System.out.println("Navigated URL is: " + SeleniumDriver.getDriver().getCurrentUrl());
             BookingId = confirmPageLocators.BookingID.getText();
             System.out.println("BookingId is: " + BookingId);
 

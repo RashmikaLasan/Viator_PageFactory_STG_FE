@@ -18,7 +18,7 @@ public class CheckOutLocators {
     @FindBy(how = How.XPATH, using = "//input[@id='lastName']")
     public WebElement LName1;
 
-    @FindBy(how = How.ID, using = "email")
+    @FindBy(how = How.XPATH, using = "//input[@id='email']")
     public WebElement Email1;
 
     @FindBy(how = How.XPATH, using = "//body/div[@id='root']/div[1]")
@@ -53,6 +53,12 @@ public class CheckOutLocators {
 
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Confirm & Pay')]")
     public WebElement Confirm;
+
+    @FindBy(how = How.XPATH, using = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]")
+    public WebElement ProductName;
+
+    @FindBy(how = How.XPATH, using = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/span[1]")
+    public WebElement Date1;
 
 
 }
