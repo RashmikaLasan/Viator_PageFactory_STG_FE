@@ -17,6 +17,7 @@ public class GenericFlowSteps {
     public String StartDate;
     CheckOutActions checkoutactions = new CheckOutActions();
     ConfirmPageActions confirmPageActions = new ConfirmPageActions();
+    ConfirmPageAssertions confirmPageAssertions = new ConfirmPageAssertions();
 
 
     @Given("^I am on the Passenger Page \"([^\"]*)\"$")
@@ -127,6 +128,14 @@ public class GenericFlowSteps {
         Thread.sleep(5000);
     }
 
+    @Then("^Store the Product Name$")
+    public void storeTheProductName() throws Throwable {
+        checkoutactions.StoreValues();
+        confirmPageAssertions.Assertions();
+
+
+    }
+
     @When("^I fill the details in Checkout Page$")
     public void iFillTheDetailsInCheckoutPage() throws Throwable {
 
@@ -174,11 +183,7 @@ public class GenericFlowSteps {
 
     }
 
-    @Then("^Store the Product Name$")
-    public void storeTheProductName() throws Throwable {
 
-
-    }
 
     @Then("^Store the Date$")
     public void storeTheDate() throws Throwable {

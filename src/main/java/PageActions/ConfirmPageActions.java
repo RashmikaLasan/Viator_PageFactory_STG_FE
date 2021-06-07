@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 public class ConfirmPageActions {
 
     ConfirmPageLocators confirmPageLocators;
-    public String ConfirmProductName;
+    public static String ConfirmProductName;
     public String BookingId;
     public String ConfirmDate;
-    public String ConfirmLocation;
+    public static String ConfirmLocation;
     public String ConfirmGuest;
 
 

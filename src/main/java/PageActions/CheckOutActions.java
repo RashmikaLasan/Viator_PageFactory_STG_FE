@@ -9,6 +9,7 @@ public class CheckOutActions {
 
     CheckOutLocators CheckOutPageLocators;
     public String ConfirmDate1;
+    public static String ProdName;
 
 
     public CheckOutActions() {
@@ -84,7 +85,7 @@ public class CheckOutActions {
 
     public void StoreValues() throws InterruptedException {
 
-        String ProdName = CheckOutPageLocators.ProductName.getText();
+        ProdName = CheckOutPageLocators.ProductName.getText();
         System.out.println(ProdName);
 
         String DateAll1 = CheckOutPageLocators.Date1.getText();

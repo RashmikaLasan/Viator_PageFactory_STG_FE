@@ -54,7 +54,7 @@ public class CheckOutLocators {
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Confirm & Pay')]")
     public WebElement Confirm;
 
-    @FindBy(how = How.XPATH, using = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]")
+    @FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]")
     public WebElement ProductName;
 
     @FindBy(how = How.XPATH, using = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/span[1]")
