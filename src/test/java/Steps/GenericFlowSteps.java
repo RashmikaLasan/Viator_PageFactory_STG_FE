@@ -142,7 +142,7 @@ public class GenericFlowSteps {
         checkoutactions.PassengerDetails();
         checkoutactions.PassengerEmail();
         checkoutactions.PayementSection();
-        Thread.sleep(5000);
+        Thread.sleep(4000);
 
     }
 
