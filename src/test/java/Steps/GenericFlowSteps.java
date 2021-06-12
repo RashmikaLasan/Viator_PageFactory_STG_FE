@@ -147,31 +147,31 @@ public class GenericFlowSteps {
     }
 
     @And("^should navigate to the Confirmation Page$")
-    public void shouldNavigateToTheConfirmationPage() throws Throwable {
+    public void shouldNavigateToTheConfirmationPage() {
         confirmPageActions.BookingIdVisible();
 
     }
 
     @And("^Booking ID Should be displayed$")
-    public void bookingIDShouldBeDisplayed() throws Throwable {
+    public void bookingIDShouldBeDisplayed() {
 
         confirmPageActions.BookingID();
     }
 
     @And("^Product Name should be displayed$")
-    public void productNameShouldBeDisplayed() throws Throwable {
+    public void productNameShouldBeDisplayed() {
 
         confirmPageActions.ProductName();
     }
 
     @And("^Date should be displayed$")
-    public void dateShouldBeDisplayed() throws Throwable {
+    public void dateShouldBeDisplayed() {
         confirmPageActions.Date();
 
     }
 
     @And("^Guest count should be displayed$")
-    public void guestCountShouldBeDisplayed() throws Throwable {
+    public void guestCountShouldBeDisplayed() {
         confirmPageActions.Guest();
 
     }
